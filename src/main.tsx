@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { store } from './store/store';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -19,11 +19,11 @@ const root = createRoot(container);
 root.render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/sport">
+      <HashRouter>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ru}>
           <App />
         </LocalizationProvider>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </StrictMode>
 );
