@@ -7,6 +7,12 @@
     <meta name="description" content="Дневник питания и тренировок - следите за своим здоровьем и достигайте целей" />
     <meta name="theme-color" content="#4CAF50" />
     <title>Дневник здоровья | Питание и тренировки</title>
+    <script>
+      // Если нет хэша в URL, добавляем его
+      if (!window.location.hash && window.location.pathname === '/sport/') {
+        window.location.replace(window.location.href + '#/');
+      }
+    </script>
     <script type="module" crossorigin src="/assets/index-Bp06DH38.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Buj3lKFr.css">
   </head>
