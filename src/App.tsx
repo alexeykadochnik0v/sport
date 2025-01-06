@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Diary } from './pages/Diary';
 import { Recipes } from './pages/Recipes';
 import { RecipeDetails } from './pages/RecipeDetails';
+import { NotFound } from './pages/NotFound';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -31,6 +32,7 @@ function App() {
           <Route path="/diary" element={<Diary />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </ThemeProvider>
